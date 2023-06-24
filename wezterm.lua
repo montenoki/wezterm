@@ -1,16 +1,18 @@
-local wezterm = require 'wezterm'
-local launch_menu = {}
+local wezterm = require("wezterm")
+
+local sub_settings = {
+	fonts = require("fonts"),
+	launch = require("launching"),
+}
+
 local config = {}
 
-if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-    table.insert(launch_menu, {
-        label = 'PowerShell',
-        args = {'powershell.exe', '-NoLogo'}
-    })
+if wezterm.config_builder then
+	config = wezterm.config_builder()
 end
 
-config.font = wezterm.font('HackGen Console NF')
-config.launch_menu = launch_menu
-config.window_decorations = 'RESIZE'
+for name, _ in pairs(sub_settings) do
+	sub_settings[name].apply_to_config(config)
+end
 
 return config
