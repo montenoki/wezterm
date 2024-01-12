@@ -2,7 +2,7 @@ local wezterm = require('wezterm')
 
 local sub_settings = {
   fonts = require('fonts'),
-  launch = require('launching'),
+  -- launch = require('launching'),
   appearance = require('appearance'),
 }
 
