@@ -4,6 +4,7 @@ local sub_settings = {
   fonts = require('fonts'),
   -- launch = require('launching'),
   appearance = require('appearance'),
+  options = require('options'),
 }
 
 local config = {}

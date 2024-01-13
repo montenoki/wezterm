@@ -11,21 +11,17 @@ function module.apply_to_config(config)
   config.initial_rows = 48
   config.window_decorations = 'RESIZE'
   config.window_frame = {
-    border_left_width = '0',
-    border_right_width = '0',
-    border_bottom_height = '0',
     border_top_height = '0.5cell',
-    border_left_color = 'black',
-    border_right_color = 'black',
-    border_bottom_color = 'black',
     border_top_color = 'black',
   }
   config.window_padding = {
-    top = '0.5cell',
+    top = 0,
     bottom = 0,
     left = 0,
     right = 0,
   }
+  config.window_background_opacity = 0.7
+  config.macos_window_background_blur = 20
 end
 
 return module
