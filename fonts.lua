@@ -7,6 +7,7 @@ function module.apply_to_config(config)
     'HackGen Console NF',
   })
   config.font_size = 14
+  config.line_height = 1.1
 end
 
 return module
