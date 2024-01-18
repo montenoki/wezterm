@@ -1,8 +1,8 @@
 local module = {}
 
 function module.apply_to_config(config)
-  config.initial_cols = 178 -- Fits 2x80 chars
-  config.initial_rows = 43
+  config.initial_cols = 90
+  config.initial_rows = 40
 
   config.hide_tab_bar_if_only_one_tab = true
   config.use_fancy_tab_bar = false
