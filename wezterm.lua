@@ -18,7 +18,10 @@ end
 local os_settings
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   os_settings = require('os.win')
-elseif wezterm.target_triple == 'x86_64-apple-darwin' then
+elseif
+  wezterm.target_triple == 'x86_64-apple-darwin'
+  or wezterm.target_triple == 'aarch64-apple-darwin'
+then
   os_settings = require('os.mac')
 elseif wezterm.target_triple == 'x86_65-unknown-linux-gnu' then
   os_settings = require('os.linux')
