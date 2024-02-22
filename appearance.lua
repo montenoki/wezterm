@@ -1,7 +1,7 @@
 local module = {}
 
 function module.apply_to_config(config)
-  config.initial_cols = 90
+  config.initial_cols = 130
   config.initial_rows = 40
 
   config.hide_tab_bar_if_only_one_tab = true
