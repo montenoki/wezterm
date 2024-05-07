@@ -7,6 +7,7 @@ if wezterm.config_builder then
 end
 
 local sub_settings = {
+  mouse = require('mouse'),
   fonts = require('fonts'),
   appearance = require('appearance'),
   options = require('options'),
