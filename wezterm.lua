@@ -13,15 +13,19 @@ local sub_settings = {
   options = require('options'),
 }
 
+local os_settings = nil
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-  table.insert(sub_settings, { os_settings = require('os.win') })
+  os_settings = require('os.win')
 elseif
   wezterm.target_triple == 'x86_64-apple-darwin'
   or wezterm.target_triple == 'aarch64-apple-darwin'
 then
-  table.insert(sub_settings, { os_settings = require('os.mac') })
+  os_settings = require('os.mac')
 elseif wezterm.target_triple == 'x86_65-unknown-linux-gnu' then
-  table.insert(sub_settings, { os_settings = require('os.linux') })
+  os_settings = require('os.linux')
+end
+if os_settings ~= nil then
+  table.insert(sub_settings, os_settings)
 end
 
 for name, _ in pairs(sub_settings) do
