@@ -9,6 +9,7 @@ function module.apply_to_config(config)
   config.use_fancy_tab_bar = false
 
   config.window_decorations = 'RESIZE'
+  config.enable_kitty_graphics = true
 end
 
 return module
