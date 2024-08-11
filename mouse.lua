@@ -4,7 +4,6 @@ local act = wezterm.action
 local module = {}
 
 function module.apply_to_config(config)
-  print('aaaa')
   config.mouse_bindings = {
     {
       event = { Down = { streak = 1, button = 'Middle' } },
