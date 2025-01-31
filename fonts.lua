@@ -6,7 +6,7 @@ function module.apply_to_config(config)
     { family = 'FiraCode Nerd Font', weight = 'Regular' },
     { family = 'HackGen Console NF', weight = 'Regular' },
   })
-  config.font_size = 11
+  config.font_size = 14
   config.line_height = 1
 end
 
